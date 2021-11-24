@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class Employee {
+	String name,address;
+	int yoj;
+	float salary;
+	public void getDet(String name,int yoj,String address,float salary)
+	{
+		this.name = name;
+		this.yoj = yoj;
+		this.address = address;
+		this.salary = salary;
+	}
+	public void printDet() 
+	{
+		System.out.println(name+"\t\t"+yoj+"\t\t"+address+"\t\t"+salary);
+	}
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		String[] name = new String[3];
+		int[] yoj = new int[3];
+		String[] address = new String[3];
+		float[] salary = new float[3];
+		for(int i=0;i<3;i++)
+		{
+			System.out.println("\nEnter employee "+ (i+1) + "Details");
+			System.out.println("Enter the name of employee: ");
+			name[i] = sc.nextLine();
+			sc.nextLine();
+			System.out.println("Enter the year of joining: ");
+			yoj[i] = sc.nextInt();
+			sc.nextLine();
+			System.out.println("Enter your address: ");
+			address[i] = sc.nextLine();
+			sc.nextLine();
+			System.out.println("Enter your salary: ");
+			salary[i] = sc.nextFloat();
+			sc.nextLine();
+		}
+		Employee emp1 = new Employee();
+		emp1.getDet(name[0],yoj[0],address[0],salary[0]);
+		Employee emp2 = new Employee();
+		emp1.getDet(name[1],yoj[1],address[1],salary[1]);
+		Employee emp3 = new Employee();
+		emp1.getDet(name[2],yoj[2],address[2],salary[2]);
+		System.out.println("Name \t\t YOJ \t\t Address \t\t Salary");
+		emp1.printDet();
+		emp2.printDet();
+		emp2.printDet();
+		
+		 
+	}
+
+}
